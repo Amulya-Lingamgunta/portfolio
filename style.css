@@ -1,0 +1,311 @@
+* {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #eef2f5;
+      font-family: 'Inter', 'Segoe UI', system-ui, -apple-system, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 2rem 1rem;
+      line-height: 1.5;
+      color: #1e2b3a;
+    }
+
+    /* resume card - exactly like a printed sheet */
+    .resume {
+      max-width: 1000px;
+      width: 100%;
+      background: white;
+      box-shadow: 0 20px 40px -10px rgba(0, 20, 40, 0.2);
+      border-radius: 20px;
+      overflow: hidden;
+    }
+
+    /* two column layout (like real resume) */
+    .resume-grid {
+      display: grid;
+      grid-template-columns: 30% 70%;
+    }
+
+    /* ----- LEFT COLUMN (sidebar - personal, skills, education) ----- */
+    .sidebar {
+      background: #11223c;
+      color: #e6edf8;
+      padding: 2rem 1.5rem;
+    }
+
+    .profile-header {
+      text-align: left;
+      margin-bottom: 2rem;
+    }
+    .profile-name {
+      font-size: 2rem;
+      font-weight: 700;
+      color: white;
+      margin-bottom: 0.3rem;
+      letter-spacing: -0.02em;
+    }
+    .profile-title {
+      font-size: 1rem;
+      font-weight: 400;
+      color: #b6cdf3;
+      background: rgba(255,255,255,0.08);
+      display: inline-block;
+      padding: 0.3rem 1.2rem;
+      border-radius: 30px;
+      margin-top: 0.3rem;
+    }
+
+    .section-title {
+      font-size: 1rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: #9bb9f0;
+      margin: 1.8rem 0 1rem 0;
+      border-bottom: 2px solid rgba(155, 185, 240, 0.2);
+      padding-bottom: 0.5rem;
+    }
+
+    /* contact items */
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+      font-size: 0.9rem;
+      margin-bottom: 0.9rem;
+      color: #d1defa;
+    }
+    .contact-item i {
+      width: 1.2rem;
+      color: #7da2e0;
+      font-size: 1rem;
+    }
+
+    /* skills - bullet style for ATS */
+    .skill-bullet {
+      list-style: none;
+      margin-top: 0.3rem;
+    }
+    .skill-bullet li {
+      font-size: 0.9rem;
+      margin-bottom: 0.7rem;
+      display: flex;
+      align-items: baseline;
+      gap: 0.5rem;
+      color: #d2dff8;
+    }
+    .skill-bullet li i {
+      color: #7da2e0;
+      font-size: 0.6rem;
+      margin-right: 0.3rem;
+    }
+    .skill-badge {
+      background: #1c3150;
+      padding: 0.25rem 0.8rem;
+      border-radius: 20px;
+      font-size: 0.8rem;
+      color: #ccdcfd;
+      display: inline-block;
+      margin-right: 0.4rem;
+      margin-bottom: 0.4rem;
+    }
+
+    /* education in sidebar */
+    .edu-item {
+      margin-bottom: 1.2rem;
+    }
+    .edu-degree {
+      font-weight: 600;
+      color: white;
+      margin-bottom: 0.2rem;
+    }
+    .edu-school {
+      font-size: 0.85rem;
+      color: #adc3e6;
+    }
+    .edu-year {
+      font-size: 0.8rem;
+      color: #8da7d0;
+      margin-top: 0.2rem;
+    }
+
+    /* ----- RIGHT COLUMN (main: summary, projects, internships) ----- */
+    .main-content {
+      padding: 2rem 2rem;
+      background: white;
+    }
+
+    .main-section {
+      margin-bottom: 2rem;
+    }
+    .main-head {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: #0b2642;
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      border-bottom: 3px solid #e2ecfe;
+      padding-bottom: 0.4rem;
+      margin-bottom: 1.2rem;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+    }
+    .main-head i {
+      color: #2c5aa6;
+      font-size: 1.1rem;
+    }
+
+    /* summary/profile summary */
+    .summary-text {
+      color: #2d4059;
+      font-size: 0.95rem;
+      margin-bottom: 1.5rem;
+      background: #f6faff;
+      padding: 1.2rem 1.4rem;
+      border-radius: 16px;
+      border-left: 5px solid #1e3c72;
+    }
+
+    /* PROJECTS - most important for freshers */
+    .project-item {
+      margin-bottom: 1.8rem;
+      border-bottom: 1px dashed #dbe4f0;
+      padding-bottom: 1.4rem;
+    }
+    .project-item:last-child {
+      border-bottom: none;
+    }
+    .project-header {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: baseline;
+      justify-content: space-between;
+      margin-bottom: 0.4rem;
+    }
+    .project-name {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: #122b50;
+    }
+    .project-links {
+      display: flex;
+      gap: 1rem;
+    }
+    .project-links a {
+      color: #2d5da7;
+      font-size: 0.8rem;
+      text-decoration: none;
+      border: 1px solid #cddcf2;
+      padding: 0.2rem 0.8rem;
+      border-radius: 30px;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.3rem;
+    }
+    .project-links a:hover {
+      background: #e3edff;
+    }
+    .project-tech {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      margin: 0.6rem 0 0.4rem;
+    }
+    .tech-tag {
+      background: #ecf2fa;
+      color: #1e3e6e;
+      font-size: 0.7rem;
+      font-weight: 600;
+      padding: 0.2rem 0.9rem;
+      border-radius: 30px;
+      letter-spacing: 0.01em;
+    }
+    .project-desc {
+      font-size: 0.9rem;
+      color: #2e405b;
+      margin: 0.5rem 0 0.2rem;
+      line-height: 1.5;
+    }
+    .project-desc ul {
+      list-style: none;
+      margin-top: 0.3rem;
+    }
+    .project-desc li {
+      margin-bottom: 0.3rem;
+      display: flex;
+      gap: 0.5rem;
+      font-size: 0.9rem;
+    }
+    .project-desc li i {
+      color: #2c5aa6;
+      font-size: 0.7rem;
+      margin-top: 0.3rem;
+      width: 1rem;
+    }
+
+    /* internships / experience (fresher-friendly) */
+    .intern-item {
+      margin-bottom: 1.3rem;
+    }
+    .intern-header {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      font-weight: 600;
+      color: #102b47;
+    }
+    .intern-role {
+      color: #1e3c72;
+    }
+    .intern-company {
+      color: #3e5f85;
+      font-weight: 500;
+    }
+    .intern-date {
+      font-size: 0.8rem;
+      color: #5b7293;
+      background: #edf2f9;
+      padding: 0.2rem 0.8rem;
+      border-radius: 30px;
+    }
+    .intern-desc {
+      font-size: 0.9rem;
+      color: #314b6b;
+      margin-top: 0.4rem;
+      padding-left: 0.5rem;
+    }
+
+    /* achievements/certifications */
+    .cert-item {
+      display: flex;
+      gap: 0.8rem;
+      font-size: 0.9rem;
+      margin-bottom: 0.6rem;
+      color: #1e3655;
+    }
+    .cert-item i {
+      color: #2e5ba7;
+      width: 1.2rem;
+      font-size: 0.9rem;
+      margin-top: 0.2rem;
+    }
+
+    .divider {
+      height: 1px;
+      background: #e2eaf5;
+      margin: 1rem 0;
+    }
+
+    /* responsive */
+    @media (max-width: 750px) {
+      .resume-grid {
+        grid-template-columns: 1fr;
+      }
+    }
